@@ -1,0 +1,9 @@
+/* styles.css atau file CSS terpisah */
+.container {
+  max-width: 400px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}

@@ -1,0 +1,12 @@
+<!-- Header Component -->
+<header class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <!-- Brand/Home Link -->
+    <a class="navbar-brand" href="/main">
+      <h1>My App</h1>
+    </a>
+
+      <!-- Right-aligned Button (e.g., Logout) -->
+      <button *ngIf="isLoggedIn" type="button" class="btn btn-danger" (click)="onLogout()">Logout</button>
+    </div>
+</header>
