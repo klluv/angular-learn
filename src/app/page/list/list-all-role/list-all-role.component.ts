@@ -31,7 +31,7 @@ export class ListAllRoleComponent implements OnInit{
   }
 
   fetchDataRole(): void {
-    axios.get('http://localhost:8080/role/all')
+    axios.get('http://192.168.110.105:8080/role/all')
     .then((response) => {
       this.dataListRole = response.data;
     })

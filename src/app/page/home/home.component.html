@@ -78,18 +78,21 @@
     <div class="card-body">
       <h5 class="card-title">Add Application Role</h5>
       <form (ngSubmit)="onAddAppRole()">
+        <label class="form-label">Select Application</label>
         <select class="form-select" aria-label="Select Application" [(ngModel)]="form.value.application_uuid"
           name="appUuid">
-          <option *ngFor="let app of dataListApplication" [value]="app.application_uuid">{{ app.application_title }}</option>
+          <option *ngFor="let app of dataListApplication" [value]="app.application_uuid">{{ app.application_title }}
+          </option>
         </select>
-      
-        <select class="form-select mt-3" aria-label="Select Role" [(ngModel)]="form.value.role_uuid" name="roleUuid">
+
+        <label class="form-label mt-3">Select Role</label>
+        <select class="form-select" aria-label="Select Role" [(ngModel)]="form.value.role_uuid" name="roleUuid">
           <option *ngFor="let role of dataListRole" [value]="role.role_uuid">{{ role.role_title }}</option>
         </select>
-      
+
         <button type="submit" class="btn btn-primary mt-3">Submit</button>
       </form>
-      
+
     </div>
   </div>
 

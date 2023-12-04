@@ -22,6 +22,7 @@ import { ListAllDivisionComponent } from './page/list/list-all-division/list-all
 import { ListAllApplicationComponent } from './page/list/list-all-application/list-all-application.component';
 import { ListAllRoleComponent } from './page/list/list-all-role/list-all-role.component';
 import { ListApplicationRoleComponent } from './page/list/list-application-role/list-application-role.component';
+import { EditDivisionComponent } from './page/edit/edit-division/edit-division.component';
 
 
 
@@ -42,7 +43,8 @@ import { ListApplicationRoleComponent } from './page/list/list-application-role/
     ListAllDivisionComponent,
     ListAllApplicationComponent,
     ListAllRoleComponent,
-    ListApplicationRoleComponent
+    ListApplicationRoleComponent,
+    EditDivisionComponent
   ],
   imports: [
     BrowserModule,

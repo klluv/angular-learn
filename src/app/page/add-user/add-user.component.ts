@@ -55,7 +55,7 @@ export class AddUserComponent implements OnInit{
   onAddUser() {
     const token = this.cookieService.get('userToken');
 
-    axios.post(`http://localhost:8080/superadmin/user/add`,
+    axios.post(`http://192.168.110.105:8080/superadmin/user/add`,
     { user_name: this.user_name, user_email: this.user_email, user_password: this.user_password }, 
     {
       headers: {
@@ -83,12 +83,24 @@ export class AddUserComponent implements OnInit{
           text: error.response.data.message,
           icon: 'error'
         });
+      } else if(error.response.status === 500) {
+        Swal.fire({
+          title: 'Error',
+          text: error.response.data.message,
+          icon: 'error'
+        });
+      } else {
+        Swal.fire({
+          title: 'Error',
+          text: error.response.data.message,
+          icon: 'error'
+        });
       }
     })
   }
   
   appData() {
-    axios.get('http://localhost:8080/application/all')
+    axios.get('http://192.168.110.105:8080/application/all')
     .then((response) => {
       this.dataListApplication = response.data;
       console.log(response.data);
@@ -101,7 +113,7 @@ export class AddUserComponent implements OnInit{
   }
   
   roleData() {
-    axios.get('http://localhost:8080/role/all')
+    axios.get('http://192.168.110.105:8080/role/all')
     .then((response) => {
       this.dataListRole = response.data;
       console.log(response.data);
@@ -114,7 +126,7 @@ export class AddUserComponent implements OnInit{
   }
   
   divisionData() {
-    axios.get('http://localhost:8080/division/all')
+    axios.get('http://192.168.110.105:8080/division/all')
     .then((response) => {
       this.dataListDivision = response.data;
       console.log(response.data);

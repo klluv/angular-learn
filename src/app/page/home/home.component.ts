@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit{
   onAddRole() {
     const token = this.cookieService.get('userToken');
 
-    axios.post(`http://localhost:8080/superadmin/role/add`,
+    axios.post(`http://192.168.110.105:8080/superadmin/role/add`,
     { role_code: this.role_code, role_title: this.role_title }, 
     {
       headers: {
@@ -102,7 +102,7 @@ export class HomeComponent implements OnInit{
   onAddDivision() {
     const token = this.cookieService.get('userToken');
 
-    axios.post(`http://localhost:8080/superadmin/division/add`,
+    axios.post(`http://192.168.110.105:8080/superadmin/division/add`,
     { division_code: this.division_code, division_title: this.division_title }, 
     {
       headers: {
@@ -149,7 +149,7 @@ export class HomeComponent implements OnInit{
   onAddApp() {
     const token = this.cookieService.get('userToken');
 
-    axios.post(`http://localhost:8080/superadmin/application/add`,
+    axios.post(`http://192.168.110.105:8080/superadmin/application/add`,
     { application_code: this.application_code, application_title: this.application_title, application_description: this.application_description }, 
     {
       headers: {
@@ -201,7 +201,7 @@ export class HomeComponent implements OnInit{
       role_uuid: this.form.value.role_uuid
     };
     
-    axios.post(`http://localhost:8080/superadmin/application/role/add`, dataToSend,
+    axios.post(`http://192.168.110.105:8080/superadmin/application/role/add`, dataToSend,
     {
       headers: {
         Authorization: `Bearer ${token}`
@@ -247,7 +247,7 @@ export class HomeComponent implements OnInit{
 
   // GET DATA
   appData() {
-    axios.get('http://localhost:8080/application/all')
+    axios.get('http://192.168.110.105:8080/application/all')
     .then((response) => {
       this.dataListApplication = response.data;
       console.log(response.data);
@@ -260,7 +260,7 @@ export class HomeComponent implements OnInit{
   }
 
   roleData() {
-    axios.get('http://localhost:8080/role/all')
+    axios.get('http://192.168.110.105:8080/role/all')
     .then((response) => {
       this.dataListRole = response.data;
       console.log(response.data);

@@ -1,0 +1,24 @@
+<form *ngIf="divisionData" (ngSubmit)="onUpdateDivision()" #editDivisionForm="ngForm">
+  <div class="container">
+    <div class="form-group row mt-3">
+      <label class="col-sm-2 col-form-label">Kode Divisi</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="division_code" name="division_code" data-test="division_code" 
+               [(ngModel)]="divisionData.division_code" name="division_code" [ngModelOptions]="{standalone: true}" 
+               required> <!-- Add the ngModel directive -->
+      </div>
+    </div>
+    <div class="form-group row mt-3">
+      <label class="col-sm-2 col-form-label">Judul Divisi</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" 
+               [(ngModel)]="divisionData.division_title" name="division_title" [ngModelOptions]="{standalone: true}" 
+               required> <!-- Add the ngModel directive -->
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <button type="submit" class="btn btn-primary" [disabled]="!editDivisionForm.valid">UPDATE</button>
+      <!-- Add the [disabled] attribute to disable the button if the form is not valid -->
+    </div>
+  </div>
+</form>

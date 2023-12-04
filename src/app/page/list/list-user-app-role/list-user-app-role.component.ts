@@ -26,7 +26,7 @@ export class ListUserAppRoleComponent implements OnInit{
   }
 
   fetchDataUserAppRole(): void {
-    axios.get('http://localhost:8080/user/application/role')
+    axios.get('http://192.168.110.105:8080/user/application/role')
     .then((response) => {
       this.dataListUserAppRole = response.data;
     })

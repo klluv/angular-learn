@@ -40,7 +40,7 @@ export class HeaderComponent implements OnInit {
   performLogout() {
     const token = this.cookieService.get('userToken');
     axios
-      .post('http://localhost:8080/logout',
+      .post('http://192.168.110.105:8080/logout',
       {},
       {
         headers: {
