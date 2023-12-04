@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="flex-item-2">
+    <div class="list-group mt-3">
+      <h3 class="mb-1">List All Role</h3>
+      <li *ngFor="let itemRole of dataListRole" class="list-group-item">
+        <p class="mb-1"><strong>Order:</strong> {{ itemRole.role_order }}</p>
+        <p class="mb-1"><strong>Code:</strong> {{ itemRole.role_code }}</p>
+        <p class="mb-1"><strong>Title:</strong> {{ itemRole.role_title }}</p>
+        <p class="mb-1"><strong>By:</strong> {{ itemRole.created_by }}</p>
+        <p class="mb-1"><strong>Created At:</strong> {{ itemRole.created_at }}</p>
+      </li>
+    </div>
+  </div>
+</div>

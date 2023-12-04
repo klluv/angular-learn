@@ -1,61 +1,24 @@
 <div class="container mt-3">
   <h2>Data List</h2>
-  <div class="flex-sm-fill">
-    <!-- ROLE -->
-    <div class="flex-item-2">
-      <div class="list-group mt-3">
-        <h3 class="mb-1">List All Role</h3>
-        <li *ngFor="let itemRole of dataListRole" class="list-group-item">
-          <p class="mb-1"><strong>Order:</strong> {{ itemRole.role_order }}</p>
-          <p class="mb-1"><strong>Code:</strong> {{ itemRole.role_code }}</p>
-          <p class="mb-1"><strong>Title:</strong> {{ itemRole.role_title }}</p>
-          <p class="mb-1"><strong>By:</strong> {{ itemRole.created_by }}</p>
-          <p class="mb-1"><strong>Created At:</strong> {{ itemRole.created_at }}</p>
-        </li>
-      </div>
-    </div>
-
-    <!-- DIVISION -->
-    <div class="flex-item-2">
-      <div class="list-group mt-3">
-        <h3 class="mb-1">List All Division</h3>
-        <li *ngFor="let itemDiv of dataListDivision" class="list-group-item">
-          <p class="mb-1"><strong>Order:</strong> {{ itemDiv.division_order }}</p>
-          <p class="mb-1"><strong>Code:</strong> {{ itemDiv.division_code }}</p>
-          <p class="mb-1"><strong>Title:</strong> {{ itemDiv.division_title }}</p>
-          <p class="mb-1"><strong>By:</strong> {{ itemx`Div.created_by }}</p>
-          <p class="mb-1"><strong>Created At:</strong> {{ itemDiv.created_at }}</p>
-        </li>
-      </div>
-    </div>
-
-    <!-- APPLICATION -->
-    <div class="flex-item-3">
-      <div class="list-group mt-3">
-        <h3 class="mb-1">All Application</h3>
-        <li *ngFor="let itemApp of dataListApplication" class="list-group-item">
-          <p class="mb-1"><strong>Order:</strong> {{ itemApp.application_order }}</p>
-          <p class="mb-1"><strong>Code:</strong> {{ itemApp.application_code }}</p>
-          <p class="mb-1"><strong>Title:</strong> {{ itemApp.application_title }}</p>
-          <p class="mb-1"><strong>Desc:</strong> {{ itemApp.application_description }}</p>
-          <p class="mb-1"><strong>By:</strong> {{ itemApp.created_by }}</p>
-          <p class="mb-1"><strong>Created At:</strong> {{ itemApp.created_at }}</p>
-        </li>
-      </div>
-    </div>
-
-    <!-- USER APPLICATION ROLE -->
-    <div class="flex-item-4">
-      <div class="list-group mt-3">
-        <h3 class="mb-1">List User Application Role</h3>
-        <li *ngFor="let itemUserAppRole of dataListUserAppRole" class="list-group-item">
-          <p class="mb-1"><strong>Order:</strong> {{ itemUserAppRole.user_name }}</p>
-          <p class="mb-1"><strong>Role title:</strong> {{ itemUserAppRole.role_title }}</p>
-          <p class="mb-1"><strong>Application title:</strong> {{ itemUserAppRole.application_title }}</p>
-          <p class="mb-1"><strong>By:</strong> {{ itemUserAppRole.division_title }}</p>
-          <button type="button" class="btn btn-primary mt-3" (click)="onEditAppRole(itemUserAppRole.user_uuid)">EDIT</button>
-        </li>
-      </div>
+  <div class="card mt-3" routerLink="/list-user-app-role" routerLinkActive="active">
+    <div class="card-body">
+      List User Application Role
     </div>
   </div>
+  <div class="card mt-3" routerLink="/list-all-division" routerLinkActive="active">
+    <div class="card-body">
+      List All Division
+    </div>
+  </div>
+  <div class="card mt-3" routerLink="/list-all-application" routerLinkActive="active">
+    <div class="card-body">
+      List All Application
+    </div>
+  </div>
+  <div class="card mt-3" routerLink="/list-all-role" routerLinkActive="active">
+    <div class="card-body">
+      List All Role
+    </div>
+  </div>
+
 </div>

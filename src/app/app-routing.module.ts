@@ -6,6 +6,11 @@ import { LoginComponent } from './page/login/login.component';
 import { ListComponent } from './page/list/list.component';
 import { EditAppRoleComponent } from './page/edit/edit-app-role/edit-app-role.component';
 import { AddUserComponent } from './page/add-user/add-user.component';
+import { ListAllApplicationComponent } from './page/list/list-all-application/list-all-application.component';
+import { ListAllDivisionComponent } from './page/list/list-all-division/list-all-division.component';
+import { ListAllRoleComponent } from './page/list/list-all-role/list-all-role.component';
+import { ListApplicationRoleComponent } from './page/list/list-application-role/list-application-role.component';
+import { ListUserAppRoleComponent } from './page/list/list-user-app-role/list-user-app-role.component';
 
 const routes: Routes = [
   {
@@ -36,6 +41,26 @@ const routes: Routes = [
       {
         path: 'add-user',
         component: AddUserComponent
+      },
+      {
+        path: 'list-all-application',
+        component: ListAllApplicationComponent
+      },
+      {
+        path: 'list-all-division',
+        component: ListAllDivisionComponent
+      },
+      {
+        path: 'list-all-role',
+        component: ListAllRoleComponent
+      },
+      {
+        path: 'list-application-role',
+        component: ListApplicationRoleComponent
+      },
+      {
+        path: 'list-user-app-role',
+        component: ListUserAppRoleComponent
       }
     ]
   }

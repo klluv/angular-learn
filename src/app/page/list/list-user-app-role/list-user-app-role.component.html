@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>User-Application-Role List</h2>
+  <div class="flex-item-4">
+    <div class="list-group mt-3">
+      <h3 class="mb-1">List User Application Role</h3>
+      <li *ngFor="let itemUserAppRole of dataListUserAppRole" class="list-group-item">
+        <p class="mb-1"><strong>Order:</strong> {{ itemUserAppRole.user_name }}</p>
+        <p class="mb-1"><strong>Role title:</strong> {{ itemUserAppRole.role_title }}</p>
+        <p class="mb-1"><strong>Application title:</strong> {{ itemUserAppRole.application_title }}</p>
+        <p class="mb-1"><strong>By:</strong> {{ itemUserAppRole.division_title }}</p>
+      </li>
+    </div>
+  </div>
+</div>

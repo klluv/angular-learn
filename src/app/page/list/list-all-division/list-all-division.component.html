@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="flex-item-2">
+    <div class="list-group mt-3">
+      <h3 class="mb-1">List All Division</h3>
+      <li *ngFor="let itemDiv of dataListDivision" class="list-group-item">
+        <p class="mb-1"><strong>Order:</strong> {{ itemDiv.division_order }}</p>
+        <p class="mb-1"><strong>Code:</strong> {{ itemDiv.division_code }}</p>
+        <p class="mb-1"><strong>Title:</strong> {{ itemDiv.division_title }}</p>
+        <p class="mb-1"><strong>By:</strong> {{ itemx`Div.created_by }}</p>
+        <p class="mb-1"><strong>Created At:</strong> {{ itemDiv.created_at }}</p>
+      </li>
+    </div>
+  </div>
+</div>

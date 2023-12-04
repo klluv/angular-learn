@@ -17,6 +17,11 @@ import { EditComponent } from './page/edit/edit.component';
 import { EditAppRoleComponent } from './page/edit/edit-app-role/edit-app-role.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AddUserComponent } from './page/add-user/add-user.component';
+import { ListUserAppRoleComponent } from './page/list/list-user-app-role/list-user-app-role.component';
+import { ListAllDivisionComponent } from './page/list/list-all-division/list-all-division.component';
+import { ListAllApplicationComponent } from './page/list/list-all-application/list-all-application.component';
+import { ListAllRoleComponent } from './page/list/list-all-role/list-all-role.component';
+import { ListApplicationRoleComponent } from './page/list/list-application-role/list-application-role.component';
 
 
 
@@ -32,7 +37,12 @@ import { AddUserComponent } from './page/add-user/add-user.component';
     ListComponent,
     EditComponent,
     EditAppRoleComponent,
-    AddUserComponent
+    AddUserComponent,
+    ListUserAppRoleComponent,
+    ListAllDivisionComponent,
+    ListAllApplicationComponent,
+    ListAllRoleComponent,
+    ListApplicationRoleComponent
   ],
   imports: [
     BrowserModule,
