@@ -18,7 +18,7 @@ export class LoginComponent {
   constructor(private router: Router, private cookieService: CookieService) {}
   
   onLogin() {
-    axios.post('http://192.168.110.100:8080/login', this.loginData)
+    axios.post('http://localhost:8080/login', this.loginData)
     .then((response) => {
       console.log(response.data.message);
       Swal.fire({

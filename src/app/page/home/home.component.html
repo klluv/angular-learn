@@ -7,12 +7,14 @@
       <form (ngSubmit)="onAddRole()">
         <div class="mb-3">
           <label for="role_code" class="form-label">Role Code:</label>
-          <input type="text" id="role_code" name="role_code" data-test="role_code" [(ngModel)]="role_code" required class="form-control">
+          <input type="text" id="role_code" name="role_code" data-test="role_code" [(ngModel)]="role_code" required
+            class="form-control">
         </div>
 
         <div class="mb-3">
           <label for="role_title" class="form-label">Role Title:</label>
-          <input type="text" id="role_title" name="role_title" data-test="role_title" [(ngModel)]="role_title" required class="form-control">
+          <input type="text" id="role_title" name="role_title" data-test="role_title" [(ngModel)]="role_title" required
+            class="form-control">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
@@ -28,12 +30,14 @@
       <form (ngSubmit)="onAddDivision()">
         <div class="mb-3">
           <label for="division_code" class="form-label">Division Code:</label>
-          <input type="text" id="division_code" name="division_code" data-test="division_code" [(ngModel)]="division_code" required class="form-control">
+          <input type="text" id="division_code" name="division_code" data-test="division_code"
+            [(ngModel)]="division_code" required class="form-control">
         </div>
 
         <div class="mb-3">
           <label for="division_title" class="form-label">Division Name:</label>
-          <input type="text" id="division_title" name="division_title" data-test="division_title" [(ngModel)]="division_title" class="form-control">
+          <input type="text" id="division_title" name="division_title" data-test="division_title"
+            [(ngModel)]="division_title" class="form-control">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
@@ -49,21 +53,45 @@
       <form (ngSubmit)="onAddApp()">
         <div class="mb-3">
           <label for="application_code" class="form-label">Application Code:</label>
-          <input type="text" id="application_code" name="application_code" data-test="application_code" [(ngModel)]="application_code" required class="form-control">
+          <input type="text" id="application_code" name="application_code" data-test="application_code"
+            [(ngModel)]="application_code" required class="form-control">
         </div>
 
         <div class="mb-3">
           <label for="application_title" class="form-label">Application Title:</label>
-          <input type="text" id="application_title" name="application_title" data-test="application_title" [(ngModel)]="application_title" required class="form-control">
+          <input type="text" id="application_title" name="application_title" data-test="application_title"
+            [(ngModel)]="application_title" required class="form-control">
         </div>
 
         <div class="mb-3">
           <label for="application_description" class="form-label">Application Description:</label>
-          <input type="text" id="application_description" name="application_description" data-test="application_description" [(ngModel)]="application_description" required class="form-control">
+          <input type="text" id="application_description" name="application_description"
+            data-test="application_description" [(ngModel)]="application_description" required class="form-control">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
   </div>
+
+  <div class="card mb-3 mt-3">
+    <div class="card-body">
+      <h5 class="card-title">Add Application Role</h5>
+      <form (ngSubmit)="onAddAppRole()">
+        <select class="form-select" aria-label="Select Application" [(ngModel)]="form.value.application_uuid"
+          name="appUuid">
+          <option *ngFor="let app of dataListApplication" [value]="app.application_uuid">{{ app.application_title }}</option>
+        </select>
+      
+        <select class="form-select mt-3" aria-label="Select Role" [(ngModel)]="form.value.role_uuid" name="roleUuid">
+          <option *ngFor="let role of dataListRole" [value]="role.role_uuid">{{ role.role_title }}</option>
+        </select>
+      
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </form>
+      
+    </div>
+  </div>
+
+
 </div>
