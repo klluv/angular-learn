@@ -9,6 +9,7 @@
         <p class="mb-1"><strong>Desc:</strong> {{ itemApp.application_description }}</p>
         <p class="mb-1"><strong>By:</strong> {{ itemApp.created_by }}</p>
         <p class="mb-1"><strong>Created At:</strong> {{ itemApp.created_at }}</p>
+        <button class="btn btn-primary mt-1" [routerLink]="['/edit-app/', itemApp.application_uuid]">Edit</button>
       </li>
     </div>
   </div>

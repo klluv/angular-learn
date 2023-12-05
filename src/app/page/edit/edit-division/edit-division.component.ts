@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import axios from 'axios';
 import { CookieService } from 'ngx-cookie-service';
-import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 
@@ -38,7 +37,7 @@ export class EditDivisionComponent implements OnInit {
   }
 
   specDivisionData() {
-    axios.get(`http://192.168.110.105:8080/division/${this.divisionUuid}`)
+    axios.get(`http://192.168.110.74:8080/division/${this.divisionUuid}`)
       .then((response) => {
         this.divisionData = response.data;
         console.log(response.data);
@@ -56,7 +55,7 @@ export class EditDivisionComponent implements OnInit {
       division_code: this.divisionData?.division_code,
       division_title: this.divisionData?.division_title
     };
-    axios.put(`http://192.168.110.105:8080/superadmin/division/update/${this.divisionUuid}`, 
+    axios.put(`http://192.168.110.74:8080/superadmin/division/update/${this.divisionUuid}`, 
     requestData,
     {
       headers: {

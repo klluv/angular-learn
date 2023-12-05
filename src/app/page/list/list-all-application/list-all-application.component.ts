@@ -33,7 +33,7 @@ export class ListAllApplicationComponent implements OnInit {
 
   // APPLICATION
   fetchDataApplication(): void {
-    axios.get('http://192.168.110.105:8080/application/all')
+    axios.get('http://192.168.110.74:8080/application/all')
     .then((response) => {
       this.dataListApplication = response.data;
     })

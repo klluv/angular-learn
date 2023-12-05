@@ -12,6 +12,8 @@ import { ListAllRoleComponent } from './page/list/list-all-role/list-all-role.co
 import { ListApplicationRoleComponent } from './page/list/list-application-role/list-application-role.component';
 import { ListUserAppRoleComponent } from './page/list/list-user-app-role/list-user-app-role.component';
 import { EditDivisionComponent } from './page/edit/edit-division/edit-division.component';
+import { EditRoleComponent } from './page/edit/edit-role/edit-role.component';
+
 
 const routes: Routes = [
   {
@@ -66,6 +68,10 @@ const routes: Routes = [
       {
         path: 'edit-division/:division_uuid',
         component: EditDivisionComponent
+      },
+      {
+        path: 'edit-role/:role_uuid',
+        component: EditRoleComponent
       }
     ]
   }

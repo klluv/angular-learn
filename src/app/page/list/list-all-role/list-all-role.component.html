@@ -8,6 +8,7 @@
         <p class="mb-1"><strong>Title:</strong> {{ itemRole.role_title }}</p>
         <p class="mb-1"><strong>By:</strong> {{ itemRole.created_by }}</p>
         <p class="mb-1"><strong>Created At:</strong> {{ itemRole.created_at }}</p>
+        <button class="btn btn-primary mt-1" [routerLink]="['/edit-role/', itemRole.role_uuid]">Edit</button>
       </li>
     </div>
   </div>

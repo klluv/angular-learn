@@ -23,6 +23,8 @@ import { ListAllApplicationComponent } from './page/list/list-all-application/li
 import { ListAllRoleComponent } from './page/list/list-all-role/list-all-role.component';
 import { ListApplicationRoleComponent } from './page/list/list-application-role/list-application-role.component';
 import { EditDivisionComponent } from './page/edit/edit-division/edit-division.component';
+import { EditRoleComponent } from './page/edit/edit-role/edit-role.component';
+import { EditAppComponent } from './page/edit/edit-app/edit-app.component';
 
 
 
@@ -44,7 +46,9 @@ import { EditDivisionComponent } from './page/edit/edit-division/edit-division.c
     ListAllApplicationComponent,
     ListAllRoleComponent,
     ListApplicationRoleComponent,
-    EditDivisionComponent
+    EditDivisionComponent,
+    EditRoleComponent,
+    EditAppComponent
   ],
   imports: [
     BrowserModule,

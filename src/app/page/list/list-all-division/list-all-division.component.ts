@@ -31,7 +31,7 @@ export class ListAllDivisionComponent implements OnInit{
   }
 
   fetchDataDivision(): void {
-    axios.get('http://192.168.110.105:8080/division/all')
+    axios.get('http://192.168.110.74:8080/division/all')
     .then((response) => {
       this.dataListDivision = response.data;
       console.log(response.data);

@@ -1,5 +1,5 @@
 <div class="container">
-  <form (ngSubmit)="onAddUser()">
+  <form (ngSubmit)="onAddUser()" data-test="userForm">
     <div class="mb-3">
       <label for="user_name" class="form-label">Name</label>
       <input type="text" id="user_name" name="user_name" data-test="user_name" [(ngModel)]="user_name" required
@@ -18,23 +18,23 @@
         [(ngModel)]="user_password" required class="form-control" placeholder="8 digit required">
     </div>
     <label class="form-label">Select Application Role</label>
-    <select class="form-select" aria-label="Select Application" [(ngModel)]="form.value.application_uuid"
+    <select class="form-select" data-test="select_application" aria-label="Select Application" [(ngModel)]="form.value.application_uuid"
       name="appUuid">
       <option value="" disabled selected>Select Application</option>
       <option *ngFor="let app of dataListApplication" [value]="app.application_uuid" >{{ app.application_title }}
       </option>
     </select>
 
-    <select class="form-select mt-3" aria-label="Select Role" [(ngModel)]="form.value.role_uuid" name="roleUuid">
+    <select class="form-select mt-3" aria-label="Select Role" data-test="select_role" [(ngModel)]="form.value.role_uuid" name="roleUuid">
       <option value="" disabled selected>Select Role</option>
       <option *ngFor="let role of dataListRole" [value]="role.role_uuid">{{ role.role_title }}</option>
     </select>
 
-    <select class="form-select mt-3" aria-label="Select Division" [(ngModel)]="form.value.division_uuid" name="division_uuid">
+    <select class="form-select mt-3" aria-label="Select Division" data-test="select_division" [(ngModel)]="form.value.division_uuid" name="division_uuid">
       <option value="" disabled selected>Select Division</option>
       <option *ngFor="let division of dataListDivision" [value]="division.division_uuid"> {{ division.division_title }}</option>
     </select>
-    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    <button type="submit" data-test="submit_button" class="btn btn-primary mt-3">Submit</button>
   </form>
 
 </div>
