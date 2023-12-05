@@ -21,9 +21,9 @@ interface Application {
   templateUrl: './list-all-application.component.html',
   styleUrls: ['./list-all-application.component.css']
 })
-export class ListAllApplicationComponent implements OnInit {
-
-  constructor(private router: Router) {}
+export class ListAllApplicationComponent {
+  
+ constructor(private router: Router) {}
 
   dataListApplication: Application[] = [];
 
@@ -31,11 +31,11 @@ export class ListAllApplicationComponent implements OnInit {
     this.fetchDataApplication()
   }
 
-  // APPLICATION
   fetchDataApplication(): void {
     axios.get('http://192.168.110.74:8080/application/all')
     .then((response) => {
       this.dataListApplication = response.data;
+      console.log(response.data);
     })
     .catch((error) => {
       if(error.response.status === 500) {
@@ -43,5 +43,4 @@ export class ListAllApplicationComponent implements OnInit {
       }
     })
   }
-  
 }

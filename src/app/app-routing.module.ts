@@ -13,7 +13,7 @@ import { ListApplicationRoleComponent } from './page/list/list-application-role/
 import { ListUserAppRoleComponent } from './page/list/list-user-app-role/list-user-app-role.component';
 import { EditDivisionComponent } from './page/edit/edit-division/edit-division.component';
 import { EditRoleComponent } from './page/edit/edit-role/edit-role.component';
-
+import { EditAppComponent } from './page/edit/edit-app/edit-app.component';
 
 const routes: Routes = [
   {
@@ -72,7 +72,11 @@ const routes: Routes = [
       {
         path: 'edit-role/:role_uuid',
         component: EditRoleComponent
-      }
+      },
+      {
+        path: 'edit-app/:application_uuid',
+        component: EditAppComponent
+      },
     ]
   }
 ];

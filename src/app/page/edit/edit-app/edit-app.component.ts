@@ -31,12 +31,12 @@ export class EditAppComponent implements OnInit {
   constructor(private route: ActivatedRoute, private cookieService: CookieService, private router: Router) {}
 
   ngOnInit(): void {
-    this.appUuid = this.route.snapshot.params['app_uuid'];
+    this.appUuid = this.route.snapshot.params['application_uuid'];
     this.specAppData();
   }
 
   specAppData() {
-    axios.get(`http://192.168.110.74:8080/superadmin/application/${this.appUuid}`)
+    axios.get(`http://192.168.110.74:8080/application/${this.appUuid}`)
       .then((response) => {
         this.appData = response.data;
         console.log(response.data);
@@ -52,7 +52,8 @@ export class EditAppComponent implements OnInit {
     const token = this.cookieService.get('userToken');
     const requestData = {
       application_code: this.appData?.application_code,
-      application_title: this.appData?.application_title
+      application_title: this.appData?.application_title,
+      application_description: this.appData?.application_description,
     };
     axios.put(`http://192.168.110.74:8080/superadmin/application/update/${this.appUuid}`, 
     requestData,
