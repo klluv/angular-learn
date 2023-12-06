@@ -70,7 +70,7 @@ export class EditAppComponent implements OnInit {
           showConfirmButton: false,
           timer: 1500,
         });
-        this.router.navigate(['/list-all-app']);
+        this.router.navigate(['/list-all-application']);
       })
       .catch((error) => {
         if(error.response.status === 422) {
